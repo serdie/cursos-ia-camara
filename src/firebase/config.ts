@@ -1,9 +1,9 @@
 export const firebaseConfig = {
-  "projectId": "curso-ia-camara",
-  "appId": "1:1028887255816:web:67b6b1cf94ffcdfb0ceabd",
-  "apiKey": "AIzaSyBZuBPDFxv7VlYRdyg7IP0aS1EzlX59bPs",
-  "authDomain": "curso-ia-camara.firebaseapp.com",
-  "storageBucket": "curso-ia-camara.firebasestorage.app",
-  "measurementId": "G-8VC0RT883E",
-  "messagingSenderId": "1028887255816"
+  "projectId": process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "curso-ia-camara",
+  "appId": process.env.NEXT_PUBLIC_FIREBASE_APP_ID || "",
+  "apiKey": process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "",
+  "authDomain": process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "",
+  "storageBucket": process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || "",
+  "measurementId": process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || "",
+  "messagingSenderId": process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || ""
 };
