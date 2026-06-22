@@ -7,3 +7,7 @@ export const firebaseConfig = {
   "measurementId": process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || "",
   "messagingSenderId": process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || ""
 };
+
+export const isFirebaseConfigured = Boolean(
+  firebaseConfig.apiKey && firebaseConfig.appId && firebaseConfig.authDomain
+);

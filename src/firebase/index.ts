@@ -1,12 +1,16 @@
 'use client';
 
-import { firebaseConfig } from '@/firebase/config';
+import { firebaseConfig, isFirebaseConfigured } from '@/firebase/config';
 import { initializeApp, getApps, getApp, FirebaseApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { initializeFirestore, getFirestore, persistentLocalCache, persistentMultipleTabManager } from 'firebase/firestore'
 import { getStorage } from 'firebase/storage'
 
 export function initializeFirebase() {
+  if (!isFirebaseConfigured) {
+    return null;
+  }
+
   if (!getApps().length) {
     const firebaseApp = initializeApp(firebaseConfig);
 
